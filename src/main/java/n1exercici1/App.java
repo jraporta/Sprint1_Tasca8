@@ -13,7 +13,7 @@ public class App
         		"Gymnastics", "Karate", "Ski", "Climbing", "Roller");
         
         Stream<String> s = list.stream();
-        list = s.filter(str -> str.contains("o")).toList();
+        list = s.filter(str -> str.toLowerCase().contains("o")).toList();
         System.out.println(list);
     }
 }
