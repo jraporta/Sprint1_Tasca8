@@ -1,8 +1,7 @@
-package n1exercici1;
+package n1exercici2;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class App 
 {
@@ -12,8 +11,11 @@ public class App
         List<String> list = Arrays.asList("Football", "Basketball", "Tennis", "Soccer", "Baseball", "Judo",
         		"Gymnastics", "Karate", "Ski", "Climbing", "Roller");
         
-        Stream<String> s = list.stream();
-        list = s.filter(str -> str.contains("o")).toList();
+  
+        list = list.stream().filter(s -> s.contains("o")).
+        		filter(s -> s.length() > 5).toList();
+        
         System.out.println(list);
+        
     }
 }
